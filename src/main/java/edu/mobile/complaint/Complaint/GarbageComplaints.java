@@ -1,4 +1,4 @@
-package edu.mobile.complaint.model;
+package edu.mobile.complaint.Complaint;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

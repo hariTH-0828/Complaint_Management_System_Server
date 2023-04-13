@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.mobile.complaint.model.GarbageComplaints;
+import edu.mobile.complaint.Complaint.GarbageComplaints;
 import edu.mobile.complaint.repository.GarbageComplaintsRepository;
 
 @RestController
