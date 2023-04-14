@@ -30,6 +30,9 @@ public class Electricity {
 	
 	@Column(name = "Status", nullable = false)
 	private String status;
+	
+	@Column(name = "Complaint_ID", nullable = false, unique = true)
+	private String complaintId;
 
 	public int getConsumerId() {
 		return consumerId;
@@ -77,6 +80,14 @@ public class Electricity {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getComplaintId() {
+		return complaintId;
+	}
+
+	public void setComplaintId(String complaintId) {
+		this.complaintId = complaintId;
 	}
 
 	public long getId() {

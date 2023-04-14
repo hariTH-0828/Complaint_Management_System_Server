@@ -28,9 +28,6 @@ public class Water {
 	@Column(name = "Address", nullable = false)
 	private String address;
 	
-	@Column(name = "Pincode", nullable = false)
-	private String pincode;
-	
 	@Column(name = "State_ID", nullable = false)
 	private int stateId;
 	
@@ -45,6 +42,9 @@ public class Water {
 	
 	@Column(name = "Status", nullable = false)
 	private String status;
+	
+	@Column(name = "Complaint_ID", nullable = false, unique = true)
+	private String complaintId;
 	
 	/*
 	 * @OneToOne(cascade = CascadeType.ALL)
@@ -123,14 +123,6 @@ public class Water {
 		this.problems = problems;
 	}
 
-	public String getPincode() {
-		return pincode;
-	}
-
-	public void setPincode(String pincode) {
-		this.pincode = pincode;
-	}
-
 	public int getStateId() {
 		return stateId;
 	}
@@ -145,6 +137,14 @@ public class Water {
 
 	public void setDistrictId(int districtId) {
 		this.districtId = districtId;
+	}
+
+	public String getComplaintId() {
+		return complaintId;
+	}
+
+	public void setComplaintId(String complaintId) {
+		this.complaintId = complaintId;
 	}
 
 	public long getId() {
