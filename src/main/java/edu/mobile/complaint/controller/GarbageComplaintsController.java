@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.mobile.complaint.Complaint.GarbageComplaints;
+import edu.mobile.complaint.Complaint.GarbageComplaint;
 import edu.mobile.complaint.repository.GarbageComplaintsRepository;
 
 @RestController
@@ -22,13 +22,13 @@ public class GarbageComplaintsController {
 	private GarbageComplaintsRepository garbageComplaintsRepo;
 	
 	@GetMapping("/getAll")
-	public List<GarbageComplaints> getAllComplaints(GarbageComplaints garbageComplaints) {
+	public List<GarbageComplaint> getAllComplaints(GarbageComplaint garbageComplaints) {
 		return garbageComplaintsRepo.findAll();
 	}
 	
 	@PostMapping("/create")
-	public ResponseEntity<GarbageComplaints> createIssue(@RequestBody GarbageComplaints garbageComplaints) {
-		return new ResponseEntity<GarbageComplaints>(garbageComplaintsRepo.save(garbageComplaints), HttpStatus.CREATED);
+	public ResponseEntity<GarbageComplaint> createIssue(@RequestBody GarbageComplaint garbageComplaints) {
+		return new ResponseEntity<GarbageComplaint>(garbageComplaintsRepo.save(garbageComplaints), HttpStatus.CREATED);
 	}
 
 }

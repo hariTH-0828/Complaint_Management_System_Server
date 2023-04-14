@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class GarbageComplaints {
+public class GarbageComplaint {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

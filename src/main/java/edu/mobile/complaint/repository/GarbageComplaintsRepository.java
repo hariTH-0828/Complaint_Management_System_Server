@@ -2,7 +2,7 @@ package edu.mobile.complaint.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import edu.mobile.complaint.Complaint.GarbageComplaints;
+import edu.mobile.complaint.Complaint.GarbageComplaint;
 
-public interface GarbageComplaintsRepository extends JpaRepository<GarbageComplaints, Integer>{
+public interface GarbageComplaintsRepository extends JpaRepository<GarbageComplaint, Integer>{
 }

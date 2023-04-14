@@ -33,7 +33,7 @@ public class ElectricityConsumerController {
 	}
 	
 	@GetMapping("{consumerNumber}")
-	public ResponseEntity<ElectricityConsumer> getIdByConsumerNumber(@PathVariable("consumerNumber") String consumerNumber) {
-		return new ResponseEntity<ElectricityConsumer>(electricityConsumerRepo.findByConsumerNumber(consumerNumber), HttpStatus.OK);
+	public ResponseEntity<Integer> getIdByConsumerNumber(@PathVariable("consumerNumber") String consumerNumber) {
+		return new ResponseEntity<Integer>(electricityConsumerRepo.findByConsumerNumber(consumerNumber).getId(), HttpStatus.OK);
 	}
 }
