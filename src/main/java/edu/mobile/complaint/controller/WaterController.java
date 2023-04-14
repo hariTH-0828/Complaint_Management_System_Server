@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,5 +30,10 @@ public class WaterController {
 	@PostMapping("/create")
 	public ResponseEntity<Water> createComplaint(@RequestBody Water water) {
 		return new ResponseEntity<Water>(waterRepository.save(water), HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/id/{complaintId}")
+	public ResponseEntity<Water> getComplaintBycId(@PathVariable("complaintId") String id) {
+		return new ResponseEntity<Water>(waterRepository.findByComplaintId(id), HttpStatus.OK);
 	}
 }
